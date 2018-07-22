@@ -7,5 +7,8 @@ import (
 )
 
 func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+	fmt.Println(strings.Join(os.Args[0:], " "))
+	for i := 1; i < len(os.Args); i++ {
+		fmt.Printf("Index: %d Value: %s\n", i, os.Args[i])
+	}
 }
